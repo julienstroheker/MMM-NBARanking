@@ -1,0 +1,26 @@
+{
+  "name": "Magic-Mirror-Module-NBA-Ranking",
+  "version": "1.0.0",
+  "description": "Get the NBA Ranks Team of the day",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julienstroheker/MMM-NBARanking"
+  },
+  "keywords": [
+    "magic mirror",
+    "smart mirror",
+    "nba",
+    "sport",
+    "ranks"
+  ],
+  "author": "Julien Stroheker",
+  "contributors": "https://github.com/julienstroheker/MMM-NBARanking/graphs/contributors",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/julienstroheker/MMM-NBARanking/issues"
+  },
+  "homepage": "https://github.com/julienstroheker/MMM-NBARanking#readme",
+  "dependencies": {
+    "request": "latest"
+  }
+}
