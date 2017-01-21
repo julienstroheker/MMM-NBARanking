@@ -4,6 +4,8 @@
 This a module for the [MagicMirror](https://github.com/MichMich/MagicMirror/tree/develop). 
 It can display the NBA Team Ranks
 
+![](./images/MMM-NBARankingScreen.png)
+
 ## Installation
 1. Navigate into your MagicMirror's `modules` folder and execute `git clone https://github.com/julienstroheker/MMM-NBARanking.git`. A new folder will appear, navigate into it.
 2. Execute `npm install` to install the node dependencies.
@@ -23,8 +25,8 @@ Here is an example of an entry in `config.js`
 	position: 'top_left',
     header: 'NBA'
 	config: {
-
-				}
+			interval: 43200000, //all modules use milliseconds
+			}
 		},
 ```
 
@@ -34,3 +36,9 @@ Here is an example of an entry in `config.js`
 ## Special Thanks
 - [Michael Teeuw](https://github.com/MichMich) for creating the awesome [MagicMirror2](https://github.com/MichMich/MagicMirror/tree/develop) project that made this module possible.
 - [kshvmdn for his library and documentation on how we can use the stats and data API](https://github.com/kshvmdn/nba.js)
+
+## More to come in the next days - In development
+- Ranking per conference
+- Reduce the font
+- Top 10
+- ...
