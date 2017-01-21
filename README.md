@@ -1,3 +1,5 @@
+### Module still in development - v0.1 ###
+
 # MMM-NBARanking
 This a module for the [MagicMirror](https://github.com/MichMich/MagicMirror/tree/develop). 
 It can display the NBA Team Ranks
