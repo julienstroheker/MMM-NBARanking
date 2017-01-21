@@ -31,3 +31,4 @@ Here is an example of an entry in `config.js`
 
 ## Special Thanks
 - [Michael Teeuw](https://github.com/MichMich) for creating the awesome [MagicMirror2](https://github.com/MichMich/MagicMirror/tree/develop) project that made this module possible.
+- [kshvmdn for his library and documentation on how we can use the stats and data API](https://github.com/kshvmdn/nba.js)
