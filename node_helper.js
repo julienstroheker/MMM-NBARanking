@@ -21,7 +21,7 @@ module.exports = NodeHelper.create({
     var pathStandings = uri+'/data/10s/prod/v1/current/standings_all.json';
     var pathTeams = uri+'/data/10s/prod/v1/2016/teams.json';
     var results = [];
-    function templateResult(){return{"teamId":"", "teamName":"", "teamLogo":"", "confName":"", "win":"", "loss":"", "confRank":"", divRank:""};};
+    function templateResult(){return{"teamId":"", "teamName":"", "teamLogo":"", "confName":"", "win":"", "loss":"", "winPct":"", "confRank":"", divRank:""};};
 
 
     request({url: pathTeams, method: 'GET'}, function(errorT, responseT, bodyT) {
@@ -59,11 +59,35 @@ module.exports = NodeHelper.create({
                     results[indexT].loss = rawStandings[indexS].loss
                     results[indexT].confRank = rawStandings[indexS].confRank
                     results[indexT].divRank = rawStandings[indexS].divRank
+                    results[indexT].winPct = rawStandings[indexS].winPct
                     //console.log("Row Updated for team "+ results[indexT].teamName + " / Win : " + results[indexT].win + " / Loss : " + results[indexT].loss + " / Div : " + results[indexT].divRank + " / Conf : " + results[indexT].confRank);
                   }
                 }
               }
-              //console.log(results);
+
+              results.sort(function (a, b) {
+                return b.winPct - a.winPct;
+              });
+              /*
+              var resultSorted = [];
+              for (var indexC = 0; indexC < results.length; indexC++) {
+                if (indexC === 0) 
+                {
+                  resultSorted.push(results[indexC]);
+                }
+                else
+                {
+                  if(results[indexC].winPct > results[indexC-1].winPct){
+                    resultSorted.unshift(results[indexC]);
+                  }
+                  else
+                  {
+                    resultSorted.push(results[indexC]);
+                  }
+                }
+              }
+              */
+              console.log(results);
               self.sendSocketNotification('NBA_NEWRANK', results)
             }
             else

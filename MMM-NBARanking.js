@@ -11,7 +11,7 @@ Module.register('MMM-NBARanking', {
 
     defaults: {
         myTeam: 'Spurs',
-        interval: 5000, //all modules use milliseconds
+        interval: 50000, //all modules use milliseconds
     },
 
     start: function() {
